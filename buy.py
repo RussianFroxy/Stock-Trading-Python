@@ -22,7 +22,7 @@ def kaufAktie(Aktie):
             try:
                 if float(f1) > float(AktienPreis * int(quantity)):
                     clear()
-                    print(Fore.WHITE, "You have bought " + quantity + " share(s) for", round(AktienPreis * int(quantity)),"$!")
+                    print(Fore.WHITE, "You have bought " + quantity + " share(s) for", round(AktienPreis * int(quantity), 2),"$!")
 
                     yourStocks = {}
 
