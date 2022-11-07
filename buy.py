@@ -7,6 +7,7 @@ import checker
 clear = lambda: os.system('cls')
 clear()
 
+
 def kaufAktie(Aktie):
     f = open("balance.json", "r")
     f1 = json.load(f)
@@ -14,15 +15,16 @@ def kaufAktie(Aktie):
 
     check = checker.sym_check_1(Aktie)
     AktienPreis = float(checker.AktienPreis(Aktie))
-    if check == True:
+    if check:
         if float(f1) > AktienPreis:
             clear()
-            print(Fore.WHITE, "How man shares of " + str.upper(Aktie) +  " do you wanna buy? \n")
+            print(Fore.WHITE, "How man shares of " + str.upper(Aktie) + " do you wanna buy? \n")
             quantity = input("> ")
             try:
                 if float(f1) > float(AktienPreis * int(quantity)):
                     clear()
-                    print(Fore.WHITE, "You have bought " + quantity + " share(s) for", round(AktienPreis * int(quantity), 2),"$!")
+                    print(Fore.WHITE, "You have bought " + quantity + " share(s) for",
+                          round(AktienPreis * int(quantity), 2), "$!")
 
                     yourStocks = {}
 

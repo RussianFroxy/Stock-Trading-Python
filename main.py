@@ -12,26 +12,26 @@ clear()
 
 while True:
 
-    print(Fore.GREEN,"Stock Simulator\n by Artur Schlee")
+    print(Fore.GREEN, "Stock Simulator\n by Artur Schlee")
     print("")
-    print(Fore.WHITE,"1 -> Invest\n 2 -> Available Stocks\n 3 -> Sell\n 4 -> Your Stocks\n 5 -> Balance")
+    print(Fore.WHITE, "1 -> Invest\n 2 -> Available Stocks\n 3 -> Sell\n 4 -> Your Stocks\n 5 -> Balance")
     choice = input("> ")
 
     if choice == "1":
-            choices.choiceOne()
+        choices.choiceOne()
 
     elif choice == "2":
-            choices.choiceTwo()
+        choices.choiceTwo()
 
     elif choice == "3":
-            choices.choiceThree()
+        choices.choiceThree()
 
     elif choice == "4":
-            choices.choiceFour()
+        choices.choiceFour()
 
     elif choice == "5":
-            choices.choiceFive()
-            
+        choices.choiceFive()
+
     elif str.upper(choice) == "EXIT":
         sys.exit()
 

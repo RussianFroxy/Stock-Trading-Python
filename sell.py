@@ -7,6 +7,7 @@ import checker
 clear = lambda: os.system('cls')
 clear()
 
+
 def verkaufAktie(Aktie):
     filename = 'yourStocks.json'
 
@@ -37,18 +38,16 @@ def verkaufAktie(Aktie):
 
                 with open(filename, "r+") as file:
                     data = json.load(file)
-                    data[str.upper(Aktie)] =  data[str.upper(Aktie)] - int(quantity)
+                    data[str.upper(Aktie)] = data[str.upper(Aktie)] - int(quantity)
                     file.seek(0)
                     json.dump(data, file)
 
                     if data[str.upper(Aktie)] == 0:
                         del data[str.upper(Aktie)]
-                        dict = data
+                        dictStocks = data
                         file.truncate(0)
                         file.seek(0)
-                        json.dump(dict, file)
-
-
+                        json.dump(dictStocks, file)
 
                 f = open("balance.json", "r")
                 f1 = json.load(f)
@@ -60,7 +59,8 @@ def verkaufAktie(Aktie):
                 f.close()
 
                 clear()
-                print(Fore.WHITE, "You have sold ", quantity, " share(s) of ", str.upper(Aktie), " for ", round(AktienPreis * int(quantity), 2),"$!")
+                print(Fore.WHITE, "You have sold ", quantity, " share(s) of ", str.upper(Aktie), " for ",
+                      round(AktienPreis * int(quantity), 2), "$!")
                 time.sleep(2)
                 clear()
         else:
