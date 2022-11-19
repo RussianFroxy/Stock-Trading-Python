@@ -1,4 +1,4 @@
 # Stock-Trading-Python
  A Python Stock Trading Script that lets you buy/sell stocks with Demo Money.
 
- Just execute main.py and have fun!
+Before you can launch main.py you need to "pip install colorama & requests"
