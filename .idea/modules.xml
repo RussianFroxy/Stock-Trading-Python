@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/StockTrading.iml" filepath="$PROJECT_DIR$/.idea/StockTrading.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Stock-Trading-Python.iml" filepath="$PROJECT_DIR$/.idea/Stock-Trading-Python.iml" />
     </modules>
   </component>
 </project>
